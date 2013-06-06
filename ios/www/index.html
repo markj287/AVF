@@ -31,29 +31,82 @@
 <div class="app">
           
   <div data-role="page" id="home" data-title="Note Buddy" data-theme="a">
-    <div data-role="header">
-      <h1>Note Buddy</h1>
-      <a href="#home" data-icon="home" data-iconpos="notext" class="ui-btn-right">Home</a>
-    </div>
-
-    
+  
     <div data-role="content">
       
       <section class="features-slider">
         <p> my features slider will go here</p>
       </section><!--end features slider section-->
       
-      <a href="#app-features" data-role="button">App Features</a>
-      <a href="#json-api" data-role="button">Json data API</a>
-      <a href="#research-topics" data-role="button">Class Research</a>
-      <a href="#note-buddy" data-role="button">Go to App</a>
       
       <!-- buttons to different pages-->
-      <p>buttons will go here</p>
+      <a href="#app-features" data-role="button" data-transition="slidefade">App Features</a>
+      <a href="#json-api" data-role="button" data-transition="slidefade">Json data API</a>
+      <a href="#research-topics" data-role="button" data-transition="slidefade">Class Research</a>
+      <a href="#note-buddy" data-role="button" data-transition="slidefade">Go to App</a>
+      
     </div><!-- end content -->
     
-    
   </div><!--end home page-->
+  
+  <div data-role="page" id="app-features">
+    <div data-role="header">
+      <h1>Note Buddy</h1><!--class="ui-btn-right"-->
+      <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slidefade">Home</a>
+    </div>
+    
+    <div data-role="content">
+
+      <section class="features">
+            <img src="img/creativity.png">
+          <section class="para">
+            <h2>Save your notes in the cloud</h2>
+            <p>
+                Never lose your notes again. Your notes are automatically save to our cloud store online, that is save and secure.
+                <a href="#note-buddy" style="display: block; margin-top: 10px;">Learn more</a>
+            </p>
+          </section>
+          <hr style="margin-top: 25px;">
+          
+
+         <h2>Unleash your creativity</h2>
+          <p>
+            Create unlimited folders, add tags to your notes. Add location to your notes, you can also attach images or a recording. Share your notes with your family and friends.
+            <a href="#note-buddy" style="display: block; margin-top: 10px;">Learn more</a>
+         </p>
+
+      </section>
+    
+    </div><!--end content-->
+  
+  </div><!-- end app features page-->
+  
+  <div data-role="page" id="json-api">
+    <div data-role="header">
+      <h1>Note Buddy</h1><!--class="ui-btn-right"-->
+      <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slidefade">Home</a>
+    </div>
+    
+    <div data-role="content">
+      
+    </div><!--end content-->
+    
+  </div><!-- end json-api page-->
+  
+  <div data-role="page" id="research-topics">
+    <div data-role="header">
+      <h1>Note Buddy</h1><!--class="ui-btn-right"-->
+      <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slidefade">Home</a>
+    </div>
+    
+    <div data-role="content">
+      
+    </div><!--end content-->
+    
+  </div><!-- end research-topics page-->
+  
+  
+  
    
 </div> <!-- end phone gap class -->
   
