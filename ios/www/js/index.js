@@ -50,10 +50,13 @@ var app = {
 
 //////////////////////// mj custom scripts 
 
-$(document).ready(function() {
-
-     $('.bxslider').bxSlider();
-    
+$(window).load(function(){
+    $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+            $('body').removeClass('loading');
+        }
+    });
 });
 
 
