@@ -47,3 +47,20 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+//////////////////////// mj custom scripts 
+
+$(document).ready(function() {
+
+     $('.bxslider').bxSlider();
+    
+});
+
+
+
+
+
+
+
+
+
