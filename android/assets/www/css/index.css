@@ -1,0 +1,44 @@
+/*
+	Mark Johnson
+	AVF 1306
+	Note Buddy
+*/
+
+/*
+#home a.ui-btn {
+	max-width: 50%;
+  	min-width: 70%;
+  	margin: 10px auto; 
+}
+#home {
+	background: #424242;
+}
+
+#home .ui-btn-inner {
+  	font-size: 18px;
+}
+*/
+
+
+#home .logo {
+	min-width: 286px;
+	max-width: 286px;
+	min-height: 163px;
+	max-height: 163px;
+	vertical-align: middle;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+/*********************************
+	features page style
+*********************************/
+.slider .flexslider .slides img {
+	max-width: 70%;
+	min-width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	margin-bottom: 40px; 
+}
