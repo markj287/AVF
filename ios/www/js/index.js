@@ -50,6 +50,7 @@ var app = {
 
 //////////////////////// mj custom scripts 
 
+/*
 $(window).load(function(){
     $('.flexslider').flexslider({
         animation: "slide",
@@ -58,7 +59,13 @@ $(window).load(function(){
         }
     });
 });
+*/
 
+$(document).ready(function($) {
+   
+    //alert("Welcome to Note Buddy");
+
+});
 
 
 
