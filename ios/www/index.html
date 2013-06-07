@@ -31,107 +31,78 @@
 <body>
 <div class="app">
           
-  <div data-role="page" id="home" data-title="Note Buddy" data-theme="a">
-  
-    <div data-role="content">
-
-       <section class="slider">
-        <div class="flexslider">
-          <ul class="slides">
-            <li>
-              <img src="img/slide-1.png" />
-            </li>
-            <li>
-              <img src="img/slide-2.png" />
-            </li>
-          </ul>
-        </div>
-      </section>
-      
-      <!--end features slider section-->
-
-      <!-- buttons to different pages-->
-      <a href="#app-features" data-role="button" data-transition="slidefade">App Features</a>
-      <a href="#json-api" data-role="button" data-transition="slidefade">Json data API</a>
-      <a href="#research-topics" data-role="button" data-transition="slidefade">Class Research</a>
-      <a href="#note-buddy" data-role="button" data-transition="slidefade">Go to App</a>
-      
-    </div><!-- end content -->
+<div data-role="page" id="home" data-title="Note Buddy" data-theme="a">
+  <div data-role="header">
+    <h1>Note Buddy</h1>
+  </div>
+  <div data-role="content">
+    <h2>Note Buddy Demo App</h2>
+    <p style="margin-bottom: 40px;">
+        Welcome to AVF 1306, I am Mark Johnson and this is my demo app for this month. This is an overview of my application and its features. Below you will find links to different features and class research. 
+    </p>
     
-  </div><!--end home page-->
-  
-  <div data-role="page" id="app-features">
-    <div data-role="header">
-      <h1>Note Buddy</h1><!--class="ui-btn-right"-->
-      <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slidefade">Home</a>
-    </div>
-    
-    <div data-role="content">
+    <h2>Note Buddy App Features</h2>
+    <div data-role="collapsible-set" data-corners="false" data-theme="a" data-content-theme="d">
 
-      <section class="features">
+          <div data-role="collapsible">
+              <h3>Access the camera</h3>
+              <p>Users of my app will be able to attach photaos and images to their notes.</p>
+          </div><!--end collaspsible-->
+
+        <div data-role="collapsible">
+            <h3>Sign in with your existing accounts</h3>
+            <p>Users of my app don't have t o create a new account, users can sign in using their facebook account, twitter or google plus, or you can simple ceate a new account. This is part of Json data API. 
+                <ol>
+                  <li><a href="http://developers.facebook.com/docs/reference/api/" target="_blank">Facebook Open Graph API</a></li>
+                  <li><a href="https://dev.twitter.com/docs/api/1.1" target="_blank">Twitter API</a></li>
+                  <li><a href="https://developers.google.com/+/api/" target="_blank">Google plus API</a></li>
+                </ol>
+            </p>
+        </div><!--end collaspsible-->
+
+        <div data-role="collapsible">
+            <h3>Geo Location</h3>
+            <p>Users can add their location to their notes and share with your their friends.</p>
+        </div><!--end collaspsible-->
+
+        <div data-role="collapsible">
+            <h3>Connection</h3>
+            <p>My app will check to see if the user has a connection, if the user does have a connection the app will sync their notes in a cloud storage.</p>
+        </div><!--end collaspsible-->
+
+        <div data-role="collapsible">
+            <h3>Cloud Storage</h3>
+            <p>Users notes will be automatically save to a secure cloud storage with cloudant DB.</p>
+        </div><!--end collaspsible-->
+
+      </div><!--end collapsible-set-->
+
+      <h2>Class Discussions</h2>
+      <div data-role="collapsible-set" data-corners="false" data-theme="a" data-content-theme="d">
         
-      <section class="para">
-        <h2>Save your notes in the cloud</h2>
-          <p>
-            Never lose your notes again. Your notes are automatically save to our cloud store online, that is save and secure.
-            <a href="#note-buddy" style="display: block; margin-top: 20px;">Learn more</a>
-          </p>
-      </section> <!-- end para section-->
-      <hr style="margin-top:100px;">
-         
-      <section class="para-r">
-        <h2>Unleash your creativity</h2>
-          <p>
-            Create unlimited folders, add tags to your notes. Add location to your notes, you can also attach images or a recording. Share
-            your notes with your family and friends.
-            <a href="#note-buddy" style="display: block; margin-top: 20px;">Learn more</a>
-          </p>
-      </section> <!-- end para-r section-->
-      <hr style="margin-top: 100px;">
+        <div data-role="collapsible">
+            <h3>Project Intent</h3>
+            <h5>Project Intent</h5>
+            <p><a href="http://course.online.fullsail.edu/index.cfm?fuseaction=lms.activitiesDiscussion&activityId=1154616&deliveryId=2275750" target="_blank">View Discussion</a></p>
+        </div><!--end collaspsible-->
 
-      <section class="para-l">
-        <h2>The world is yours</h2>
-          <p>
-            You already have too much accounts, there's no need to create another one. Sign in with your exsitig accounts using facebook,
-            twitter or google plus. See the notes your friends are saving, share and comment on notes with your friends.
-            <a href="#note-buddy" style="display: block; margin-top: 20px;">Learn more</a>
-          </p>
-      </section> <!-- end para-l section-->
-      <hr style="margin-top: 100px;">
+        <div data-role="collapsible">
+            <h3>Accessibility</h3>
+            <h5>Accessibility</h5>
+            <p><a href="http://course.online.fullsail.edu/index.cfm?fuseaction=lms.activitiesDiscussion&activityId=1154622&deliveryId=2275756" target="_blank">View Discussion</a></p>
+        </div><!--end collaspsible-->
 
-      </section> <!--end features section-->
-    
-    </div><!--end content-->
-  
-  </div><!-- end app features page-->
-  
-  <div data-role="page" id="json-api">
-    <div data-role="header">
-      <h1>Note Buddy</h1><!--class="ui-btn-right"-->
-      <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slidefade">Home</a>
-    </div>
-    
-    <div data-role="content">
-      
-    </div><!--end content-->
-    
-  </div><!-- end json-api page-->
-  
-  <div data-role="page" id="research-topics">
-    <div data-role="header">
-      <h1>Note Buddy</h1><!--class="ui-btn-right"-->
-      <a href="#home" data-icon="home" data-iconpos="notext" data-transition="slidefade">Home</a>
-    </div>
-    
-    <div data-role="content">
-      
-    </div><!--end content-->
-    
-  </div><!-- end research-topics page-->
-  
-  
-  
-   
+        <div data-role="collapsible">
+            <h3>Industry Research</h3>
+            <h5>Industry Research</h5>
+            <p><a href="http://course.online.fullsail.edu/index.cfm?fuseaction=lms.activitiesDiscussion&activityId=1154627&deliveryId=2275761" target="_blank">View Discussion</a></p>
+        </div><!--end collaspsible-->
+
+    </div><!--end collapsible-set-->
+
+  </div><!-- end content-->
+</div><!--end page-->
+
 </div> <!-- end phone gap class -->
   
   
