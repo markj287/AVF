@@ -37,11 +37,20 @@
             <header data-role="header" data-tap-toggle="false">
                 <h1>Settings</h1>
             </header>
+
+            <div data-role="content">
+                <a href="#" data-role="button" data-theme="a" style="background:#3B5998; border: 0px solid #fff;">Connect twitter</a>
+                <a href="#" data-role="button" data-theme="a" style="background:#4099FF; border: 0px solid #fff;">Connect facebook</a>
+                <a href="#" data-role="button" data-theme="a">Connect google+</a>
+            </div><!--end panel content-->
+
         </div><!--end panel-->
 
       <div data-role="header" data-tap-toggle="false">
         <!--btn for panel-->
-        <a href="#settings-panel"  data-icon="gear" data-iconpos="notext" data-inline="true" data-iconpos="right">Settings</a>
+        <div class="ui-btn-left" data-role="controlgroup" data-type="horizontal">
+            <a href="#settings-panel" data-role="button" data-icon="gear" data-iconpos="notext" data-inline="true" data-iconpos="right">Settings</a>
+        </div>
 
         <div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
             <a href="#options" data-role="button" data-icon="bars" data-iconpos="notext" data-rel="popup" data-iconpos="right" data-transition="slidedown">Options</a>
@@ -50,7 +59,7 @@
             <a href="#"  data-role="button" data-icon="grid" data-iconpos="notext" data-inline="true"  data-iconpos="right">Settings</a>
         </div><!-- end ui btn right div -->
     
-        <h1>Note Buddy</h1>
+        <h1></h1>
         </div><!--end header-->
     
     <div data-role="content">
@@ -72,7 +81,7 @@
              <hr>   
 
             <p>
-                <button type="submit" data-theme="b" data-inline="true">Done</button>
+                <button type="submit" data-theme="b" data-inline="true" class="save-btn">Done</button>
                 <button type="reset" data-theme="d" data-inline="true">Cencel</button>
             </p>
 
