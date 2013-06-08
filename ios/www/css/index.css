@@ -38,7 +38,6 @@
 	padding: 0;
 }
 
-
 #home .logo {
 	min-width: 286px;
 	max-width: 286px;
@@ -61,3 +60,18 @@
 	margin-top: 40px;
 	margin-bottom: 40px; 
 }
+
+
+
+
+html,body, div[data-role ="page"] {
+            height: device-height;
+            width: device-width;
+            margin: 0px;
+            padding: 0px;
+        }
+ 
+        
+
+
+
