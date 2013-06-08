@@ -30,8 +30,44 @@
     </head>
 <body>
 <div class="app">
+
+<div data-role="page" id="home">
+    
+        <div data-role="panel" id="settings-panel" data-display="push" data-dismissible="false">
+            <header data-role="header">
+                <h1>Settings</h1>
+            </header>
+        </div><!--end panel-->
+
+      <div data-role="header">
+            <a href="#settings-panel"  data-icon="gear" data-iconpos="notext">Settings</a><!--btn for panel-->
+            <a href="#more-options-menu"  data-icon="bars" data-iconpos="notext" data-rel="popup"  data-inline="true" data-iconpos="right" data-transition="slidedown">Settings</a><!--btn for panel-->
+           
+             <!--<a href="#"  data-icon="delete" data-iconpos="notext" data-inline="true"  data-iconpos="right">Settings</a>
+            <a href="#"  data-icon="edit" data-iconpos="notext" data-inline="true"  data-iconpos="right">Settings</a>
+            <a href="#"  data-icon="grid" data-iconpos="notext" data-inline="true"  data-iconpos="right">Settings</a>-->
+            <h1>Home</h1>
+        </div><!--end header-->
+    
+    <div data-role="content">
+
+        <div data-role="popup" id="more-options-menu" data-theme="d">
+            <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+                <li data-role="divider" data-theme="a">Choose an action</li>
+                <li data-icon="plus" class="ui-icon-alt"><a href="#">New Note</a></li>
+                <li data-icon="alert" class="ui-icon-alt"><a href="#">Attach Image</a></li>
+                <li data-icon="delete" class="ui-icon-alt"><a href="#">Delete</a></li>
+            </ul>
+        </div><!--end popup-->
+
+        <!--<label for="textarea">New Note:</label>-->
+        <textarea cols="100" rows="40" name="textarea" id="textarea" style="height:500px;" placeholder="Add note contents here"></textarea>
+        
+    </div><!--end content-->
+
+</div> <!--end home-->
           
-<div data-role="page" id="home" data-title="Note Buddy" data-theme="a">
+<div data-role="page" id="class-stuff" data-title="Note Buddy" data-theme="a">
  
   <div data-role="content">
 

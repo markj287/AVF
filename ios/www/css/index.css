@@ -19,6 +19,13 @@
 }
 */
 
+/*********************************
+	settings panel style
+*********************************/
+.ui-panel-inner {
+	padding: 0;
+}
+
 
 #home .logo {
 	min-width: 286px;
