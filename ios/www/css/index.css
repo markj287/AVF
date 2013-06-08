@@ -19,12 +19,12 @@
 }
 */
 
-#home .ui-btn-up-b {
+#page .ui-btn-up-b {
 	background: #108040;
 }
 
 
-#home textarea {
+#page textarea {
 	height:500px;
 	box-shadow:0px 0px 0px #fff;
 	border: 0px solid #fff;
@@ -39,11 +39,11 @@
 /*********************************
  header horizontal btn group
  ********************************/
- #home .ui-controlgroup-horizontal .ui-btn {
+ #page .ui-controlgroup-horizontal .ui-btn {
  	 margin-right: 20px;
  }
 
-  #home .ui-controlgroup-horizontal .ui-btn .ui-last-child {
+  #page .ui-controlgroup-horizontal .ui-btn .ui-last-child {
  	 margin-right: 0px;
  }
 
@@ -54,7 +54,7 @@
 	padding: 0;
 }
 
-#home .logo {
+#page .logo {
 	min-width: 286px;
 	max-width: 286px;
 	min-height: 163px;
