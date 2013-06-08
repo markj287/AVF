@@ -40,18 +40,22 @@
         </div><!--end panel-->
 
       <div data-role="header" data-tap-toggle="false">
-            <a href="#settings-panel"  data-icon="gear" data-iconpos="notext" data-inline="true">Settings</a><!--btn for panel-->
-            <a href="#more-options-menu"  data-icon="bars" data-iconpos="notext" data-rel="popup"  data-inline="true" data-iconpos="right" data-transition="slidedown">Settings</a><!--btn for panel-->
-           
-             <!--<a href="#"  data-icon="delete" data-iconpos="notext" data-inline="true"  data-iconpos="right">Settings</a>
-            <a href="#"  data-icon="edit" data-iconpos="notext" data-inline="true"  data-iconpos="right">Settings</a>
-            <a href="#"  data-icon="grid" data-iconpos="notext" data-inline="true"  data-iconpos="right">Settings</a>-->
-            <h1>Note Buddy</h1>
+        <!--btn for panel-->
+        <a href="#settings-panel"  data-icon="gear" data-iconpos="notext" data-inline="true" data-iconpos="right">Settings</a>
+
+        <div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
+            <a href="#options" data-role="button" data-icon="bars" data-iconpos="notext" data-rel="popup" data-iconpos="right" data-transition="slidedown">Options</a>
+            <a href="#" data-role="button"  data-icon="delete" data-iconpos="notext" data-inline="true"  data-iconpos="right">Settings</a>
+            <a href="#" data-role="button" data-icon="edit" data-iconpos="notext" data-inline="true"  data-iconpos="right">Settings</a>
+            <a href="#"  data-role="button" data-icon="grid" data-iconpos="notext" data-inline="true"  data-iconpos="right">Settings</a>
+        </div><!-- end ui btn right div -->
+    
+        <h1>Note Buddy</h1>
         </div><!--end header-->
     
     <div data-role="content">
 
-        <div data-role="popup" id="more-options-menu" data-theme="d">
+        <div data-role="popup" id="options" data-theme="d">
             <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
                 <li data-role="divider" data-theme="a">Choose an action</li>
                 <li data-icon="plus" class="ui-icon-alt"><a href="#">New Note</a></li>

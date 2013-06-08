@@ -32,6 +32,17 @@
 }
 
 /*********************************
+ header horizontal btn group
+ ********************************/
+ #home .ui-controlgroup-horizontal .ui-btn {
+ 	 margin-right: 20px;
+ }
+
+  #home .ui-controlgroup-horizontal .ui-btn .ui-last-child {
+ 	 margin-right: 0px;
+ }
+
+/*********************************
 	settings panel style
 *********************************/
 .ui-panel-inner {
@@ -64,13 +75,6 @@
 
 
 
-html,body, div[data-role ="page"] {
-            height: device-height;
-            width: device-width;
-            margin: 0px;
-            padding: 0px;
-        }
- 
         
 
 
