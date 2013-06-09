@@ -31,84 +31,104 @@
 <body>
 <div class="app">
 
- <div data-role="page" id="home">
-    <div data-role="header"><h1></h1></div>
-    <div data-role="content">
-         <section class="slider">
-        <div class="flexslider">
-          <ul class="slides">
-            <li>
-              <img src="img/slide-1.png" />
-            </li>
-            <li>
-              <img src="img/slide-2.png" />
-            </li>
-          </ul>
-        </div>
-      </section>
-    </div><!--end content-->
-      
- </div> <!--end page-->  
+	<div data-role="page" id="home">
 
-<div data-role="page" id="app">
-    
-        <div data-role="panel" id="settings-panel" data-display="push" data-dismissible="false">
-            <header data-role="header" data-tap-toggle="false">
-                <h1>Settings</h1>
-            </header>
+		<div data-role="content">
 
-            <div data-role="content">
-                <a href="#" data-role="button" data-theme="a" style="background:#3B5998; border: 0px solid #fff;">Connect twitter</a>
-                <a href="#" data-role="button" data-theme="a" style="background:#4099FF; border: 0px solid #fff;">Connect facebook</a>
-                <a href="#" data-role="button" data-theme="a">Connect google+</a>
-            </div><!--end panel content-->
+			<section class="slider">
 
-        </div><!--end panel-->
+				<div class="flexslider">
 
-      <div data-role="header" data-tap-toggle="false">
-        <!--btn for panel-->
-        <div class="ui-btn-left" data-role="controlgroup" data-type="horizontal">
-            <a href="#settings-panel" data-role="button" data-icon="gear" data-iconpos="notext" data-inline="true" data-iconpos="right">Settings</a>
-        </div>
+					<ul class="slides">
 
-        <div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
-            <a href="#options" data-role="button" data-icon="bars" data-iconpos="notext" data-rel="popup" data-iconpos="right" data-transition="slidedown">Options</a>
-            <a href="#" data-role="button"  data-icon="delete" data-iconpos="notext" data-inline="true"  data-iconpos="right">Settings</a>
-            <a href="#" data-role="button" data-icon="edit" data-iconpos="notext" data-inline="true"  data-iconpos="right">Settings</a>
-            <a href="#"  data-role="button" data-icon="grid" data-iconpos="notext" data-inline="true"  data-iconpos="right">Settings</a>
-        </div><!-- end ui btn right div -->
-    
-        <h1></h1>
-        </div><!--end header-->
-    
-    <div data-role="content">
+						<li>
+							<img src="img/slide-1.png" />
+						</li>
+						<li>
+							<img src="img/slide-2.png" />
+						</li>
 
-        <div data-role="popup" id="options" data-theme="d">
-            <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
-                <li data-role="divider" data-theme="a">Choose an action</li>
-                <li data-icon="plus" class="ui-icon-alt"><a href="#">New Note</a></li>
-                <li data-icon="alert" class="ui-icon-alt"><a href="#">Attach Image</a></li>
-                <li data-icon="delete" class="ui-icon-alt"><a href="#">Delete</a></li>
-            </ul>
-        </div><!--end popup-->
-        
-        <form>
+					</ul>
+				</div>
 
-            <!--<label for="textarea">New Note:</label>-->
-            <textarea cols="100" rows="40" name="textarea" id="textarea" placeholder="Add some text"></textarea>
-            
-             <hr>   
+			</section><!--end slider -->
 
-            <p>
-                <button type="submit" data-theme="b" data-inline="true" class="save-btn">Done</button>
-                <button type="reset" data-theme="d" data-inline="true">Cencel</button>
-            </p>
+		</div><!--end content-->
 
-    </form> <!--end form-->
-    
-    </div><!--end content-->
+	</div> <!--end home page-->  
 
-</div> <!--end home-->
+	<div data-role="page" id="app">
+
+		<div data-role="panel" id="settings-panel" data-display="push" data-dismissible="false">
+
+			<header data-role="header" data-tap-toggle="false">
+
+				<h1>Settings</h1>
+
+			</header>
+
+			<div data-role="content">
+
+				<a href="#" data-role="button" data-theme="a" style="background:#3B5998; border: 0px solid #fff;">Connect twitter</a>
+				<a href="#" data-role="button" data-theme="a" style="background:#4099FF; border: 0px solid #fff;">Connect facebook</a>
+				<a href="#" data-role="button" data-theme="a">Connect google+</a>
+
+			</div><!--end panel content-->
+
+		</div><!--end panel-->
+
+		<div data-role="header" data-tap-toggle="false">
+
+			<!--btn for panel-->
+			<div class="ui-btn-left" data-role="controlgroup" data-type="horizontal">
+				<a href="#settings-panel" data-role="button" data-icon="gear" data-iconpos="notext" data-inline="true" data-iconpos="right">Settings</a>
+
+			</div>
+
+			<div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
+
+				<a href="#options" data-role="button" data-icon="bars" data-iconpos="notext" data-rel="popup" data-iconpos="right" data-transition="slidedown">Options</a>
+				<a href="#" data-role="button"  data-icon="delete" data-iconpos="notext" data-inline="true"  data-iconpos="right">Settings</a>
+				<a href="#" data-role="button" data-icon="edit" data-iconpos="notext" data-inline="true"  data-iconpos="right">Settings</a>
+				<a href="#"  data-role="button" data-icon="grid" data-iconpos="notext" data-inline="true"  data-iconpos="right">Settings</a>
+
+			</div><!-- end ui btn right div -->
+
+			<h1></h1>
+		</div><!--end header-->
+
+		<div data-role="content">
+
+			<div data-role="popup" id="options" data-theme="d">
+
+				<ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+					<li data-role="divider" data-theme="a">Choose an action</li>
+					<li data-icon="plus" class="ui-icon-alt"><a href="#">New Note</a></li>
+					<li data-icon="alert" class="ui-icon-alt"><a href="#">Attach Image</a></li>
+					<li data-icon="delete" class="ui-icon-alt"><a href="#">Delete</a></li>
+
+				</ul> <!--end listview -->
+
+			</div><!--end popup-->
+
+			<form>
+
+				<!--<label for="textarea">New Note:</label>-->
+				<textarea cols="100" rows="40" name="textarea" id="textarea" placeholder="Add some text"></textarea>
+
+				<hr>   
+
+				<p>
+					<button type="submit" data-theme="b" data-inline="true" class="save-btn">Done</button>
+					<button type="reset" data-theme="d" data-inline="true">Cencel</button>
+				</p>
+
+			</form> <!--end form-->
+
+		</div><!--end content-->
+
+	</div> <!--end app page-->
           
 <div data-role="page" id="class-stuff" data-title="Note Buddy" data-theme="a">
  
