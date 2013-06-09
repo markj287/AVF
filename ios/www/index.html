@@ -55,8 +55,17 @@
 			</section><!--end slider -->
 
 			<!-- call to action buttons -->
-			<a href="#app" data-role="button" data-theme="a" data-transition="slidefade">go to app</a>
-			<a href="#class-stuff" data-role="button" data-theme="a" data-transition="slidefade">class stuff</a>
+			<fieldset class="ui-grid-a">
+
+				<div class="ui-block-a">
+					<a href="#app" data-role="button" data-theme="a" data-transition="slidefade">go to app</a>
+				</div>
+
+				<div class="ui-block-b">
+					<a href="#class-stuff" data-role="button" data-theme="a" data-transition="slidefade">class stuff</a>
+				</div>	 
+
+			</fieldset>
 
 		</div><!--end content-->
 
@@ -244,9 +253,11 @@
 <script type="text/javascript" src="js/jquery.mobile-1.3.1.min.js"></script>
 <script type="text/javascript" src="cordova-2.7.0.js"></script>
 <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="js/jquery.touchslider2.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
   app.initialize();
+  window.mySwipe = Swipe(document.getElementById('slider'));
 </script>
 </body>
 </html>
