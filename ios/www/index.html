@@ -29,6 +29,7 @@
         <title>Note Buddy</title>
     </head>
 <body>
+
 <div class="app">
 
 	<div data-role="page" id="home">
@@ -130,78 +131,107 @@
 
 	</div> <!--end app page-->
           
-<div data-role="page" id="class-stuff" data-title="Note Buddy" data-theme="a">
- 
-  <div data-role="content">
+	<div data-role="page" id="class-stuff" data-title="Note Buddy" data-theme="a">
 
-        <img src="img/note-buddy-logo.png" class="logo">
+		<div data-role="content">
 
-    <h2>Note Buddy Demo App</h2>
-    <p style="margin-bottom: 40px;">
-        Welcome to AVF 1306, I am Mark Johnson and this is my demo app for this month. This is an overview of my application and its features. Below you will find links to different features and class research. 
-    </p>
-    
-    <h2>Note Buddy App Features</h2>
-    <div data-role="collapsible-set" data-corners="false" data-theme="a" data-content-theme="d">
+			<img src="img/note-buddy-logo.png" class="logo"> <!--logo -->
 
-          <div data-role="collapsible">
-              <h3>Access the camera</h3>
-              <p>Users of my app will be able to attach photaos and images to their notes.</p>
-          </div><!--end collaspsible-->
+			<h2>Note Buddy Demo App</h2>
+			<p style="margin-bottom: 40px;">
+				Welcome to AVF 1306, I am Mark Johnson and this is my demo app for this month. This is an overview of my application and its features. Below you will find links to different features and class research. 
+			</p>
 
-        <div data-role="collapsible">
-            <h3>Sign in with your existing accounts</h3>
-            <p>Users of my app don't have t o create a new account, users can sign in using their facebook account, twitter or google plus, or you can simple ceate a new account. This is part of Json data API. 
-                <ol>
-                  <li><a href="http://developers.facebook.com/docs/reference/api/" target="_blank">Facebook Open Graph API</a></li>
-                  <li><a href="https://dev.twitter.com/docs/api/1.1" target="_blank">Twitter API</a></li>
-                  <li><a href="https://developers.google.com/+/api/" target="_blank">Google plus API</a></li>
-                </ol>
-            </p>
-        </div><!--end collaspsible-->
+			<h2>Note Buddy App Features</h2>
+			<div data-role="collapsible-set" data-corners="false" data-theme="a" data-content-theme="d">
 
-        <div data-role="collapsible">
-            <h3>Geo Location</h3>
-            <p>Users can add their location to their notes and share with your their friends.</p>
-        </div><!--end collaspsible-->
+				<div data-role="collapsible">
 
-        <div data-role="collapsible">
-            <h3>Connection</h3>
-            <p>My app will check to see if the user has a connection, if the user does have a connection the app will sync their notes in a cloud storage.</p>
-        </div><!--end collaspsible-->
+					<h3>Access the camera</h3>
+					<p>Users of my app will be able to attach photaos and images to their notes.</p>
 
-        <div data-role="collapsible">
-            <h3>Cloud Storage</h3>
-            <p>Users notes will be automatically save to a secure cloud storage with cloudant DB.</p>
-        </div><!--end collaspsible-->
+				</div><!--end collaspsible-->
 
-      </div><!--end collapsible-set-->
+				<div data-role="collapsible">
 
-      <h2>Class Discussions</h2>
-      <div data-role="collapsible-set" data-corners="false" data-theme="a" data-content-theme="d">
-        
-        <div data-role="collapsible">
-            <h3>Project Intent</h3>
-            <h5>Project Intent</h5>
-            <p><a href="http://course.online.fullsail.edu/index.cfm?fuseaction=lms.activitiesDiscussion&activityId=1154616&deliveryId=2275750" target="_blank">View Discussion</a></p>
-        </div><!--end collaspsible-->
+					<h3>Sign in with your existing accounts</h3>
+					<p>
+						Users of my app don't have t o create a new account, users can sign in using their facebook account, twitter or google plus, or you can simple ceate a new account. This is part of Json data API. 
+						<ol>
+							<li><a href="http://developers.facebook.com/docs/reference/api/" target="_blank">Facebook Open Graph API</a></li>
+							<li><a href="https://dev.twitter.com/docs/api/1.1" target="_blank">Twitter API</a></li>
+							<li><a href="https://developers.google.com/+/api/" target="_blank">Google plus API</a></li>
+						</ol>
+					</p>
 
-        <div data-role="collapsible">
-            <h3>Accessibility</h3>
-            <h5>Accessibility</h5>
-            <p><a href="http://course.online.fullsail.edu/index.cfm?fuseaction=lms.activitiesDiscussion&activityId=1154622&deliveryId=2275756" target="_blank">View Discussion</a></p>
-        </div><!--end collaspsible-->
+				</div><!--end collaspsible-->
 
-        <div data-role="collapsible">
-            <h3>Industry Research</h3>
-            <h5>Industry Research</h5>
-            <p><a href="http://course.online.fullsail.edu/index.cfm?fuseaction=lms.activitiesDiscussion&activityId=1154627&deliveryId=2275761" target="_blank">View Discussion</a></p>
-        </div><!--end collaspsible-->
+				<div data-role="collapsible">
 
-    </div><!--end collapsible-set-->
+					<h3>Geo Location</h3>
+					<p>Users can add their location to their notes and share with your their friends.</p>
 
-  </div><!-- end content-->
-</div><!--end page-->
+				</div><!--end collaspsible-->
+
+				<div data-role="collapsible">
+
+					<h3>Connection</h3>
+					<p>
+						My app will check to see if the user has a connection, if the user does have a connection the app will sync their notes in a cloud storage.
+					</p>
+
+				</div><!--end collaspsible-->
+
+				<div data-role="collapsible">
+
+					<h3>Cloud Storage</h3>
+					<p>
+						Users notes will be automatically save to a secure cloud storage with cloudant DB.
+					</p>
+
+				</div><!--end collaspsible-->
+
+			</div><!--end collapsible-set-->
+
+			<h2>Class Discussions</h2>
+			<div data-role="collapsible-set" data-corners="false" data-theme="a" data-content-theme="d">
+
+				<div data-role="collapsible">
+
+					<h3>Project Intent</h3>
+					<h5>Project Intent</h5>
+					<p>
+						<a href="http://course.online.fullsail.edu/index.cfm?fuseaction=lms.activitiesDiscussion&activityId=1154616&deliveryId=2275750" target="_blank">View Discussion</a>
+					</p>
+
+				</div><!--end collaspsible-->
+
+				<div data-role="collapsible">
+
+					<h3>Accessibility</h3>
+					<h5>Accessibility</h5>
+
+					<p>
+						<a href="http://course.online.fullsail.edu/index.cfm?fuseaction=lms.activitiesDiscussion&activityId=1154622&deliveryId=2275756" target="_blank">View Discussion</a>
+					</p>
+
+				</div><!--end collaspsible-->
+
+				<div data-role="collapsible">
+
+					<h3>Industry Research</h3>
+					<h5>Industry Research</h5>
+					<p>
+						<a href="http://course.online.fullsail.edu/index.cfm?fuseaction=lms.activitiesDiscussion&activityId=1154627&deliveryId=2275761" target="_blank">View Discussion</a>
+					</p>
+					
+				</div><!--end collaspsible-->
+
+			</div><!--end collapsible-set-->
+
+		</div><!-- end content-->
+
+	</div><!--end  class-stuff page-->
 
 </div> <!-- end phone gap class -->
   
