@@ -15,6 +15,27 @@
 	margin-bottom: 50px;
 }
 
+#create-a-note textarea {
+	height:500px;
+	box-shadow:0px 0px 0px #fff;
+	border: 0px solid #fff;
+ 	background: #f9f9f9;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f9f9f9), to(#eeeeee));
+	background-image: -webkit-linear-gradient(#f9f9f9, #eeeeee);
+	background-image: -moz-linear-gradient(#f9f9f9, #eeeeee);
+	background-image: -o-linear-gradient(#f9f9f9, #eeeeee);
+	background-image: linear-gradient(#f9f9f9, #eeeeee);
+}
+
+#create-a-note  .ui-panel {
+	background: #444;
+}
+
+#create-a-note  .ui-listview{
+	background: #444;
+	padding: 0;
+}
+
 /*Ipad Retina CSS*/
 @media only screen and (-webkit-min-device-pixel-ratio:2) {
 	#home  {
