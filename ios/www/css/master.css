@@ -1,0 +1,16 @@
+/*
+	Author: Mark Johnson
+	Claas: AVF 1306
+*/
+
+#home  {
+    background: url(../img/black-bg.png) repeat scroll 50% 50% #112233 !important;
+    color: #aabbcc !important;
+}  
+
+#home .logo  {
+	vertical-align: middle;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}

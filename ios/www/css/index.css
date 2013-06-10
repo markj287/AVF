@@ -57,17 +57,6 @@
 	padding: 0;
 }
 
-#app .logo {
-	min-width: 286px;
-	max-width: 286px;
-	min-height: 163px;
-	max-height: 163px;
-	vertical-align: middle;
-	display: block;
-	margin: 0 auto;
-	margin-bottom: 50px;
-}
-
 /*********************************
 	features page style
 *********************************/
