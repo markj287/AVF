@@ -17,7 +17,7 @@ $(document).ready(function() {
     $('#submit').click(function() {
         var params = {
             q: $('#query').val(),
-            rpp: 5
+            count: 10
         };
         //alert(jQuery.param(params));
         mjTwitterApi (params);
