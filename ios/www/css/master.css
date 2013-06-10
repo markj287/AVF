@@ -14,3 +14,12 @@
 	margin: 0 auto;
 	margin-bottom: 50px;
 }
+
+/*Ipad Retina CSS*/
+@media only screen and (-webkit-min-device-pixel-ratio:2) {
+	#home  {
+		/*background: url(../img/grey-bg.png) repeat scroll 50% 50% #112233 !important;
+    		color: #aabbcc !important;
+    		*/
+	}  
+}

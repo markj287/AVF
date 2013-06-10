@@ -5,19 +5,11 @@
 */
 
 
-#home a.ui-btn {
-	max-width: 240px;
-}
 
 /*
 #home .ui-btn-inner {
   	font-size: 18px;
 }*/
-
-#home {
-	background: #424242;
-	background: url("..img/account.png");
-}
 
 #app .ui-btn-up-b {
 	background: #108040;

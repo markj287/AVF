@@ -25,7 +25,6 @@
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.1.min.css" />
         <link rel="stylesheet" type="text/css" href="css/themes/note-buddy.min.css" />
         <link rel="stylesheet" type="text/css" href="css/flexslider.css" />       
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/master.css" />
         <title>Note Buddy</title>
     </head>
@@ -38,14 +37,16 @@
 
 			<img src="img/note-buddy-logo.png" class="logo">
 
-			<fieldset class="ui-grid-a">
+			<div class="ui-grid-a">
 				<div class="ui-block-a">
-					<a href="#sign-in" data-role="button" data-display="inline">Sign in</a>
+					<a href="#sign-in" data-role="button">Sign in</a>
 				</div>
 				<div class="ui-block-b">
 				    	<a href="#sign-up" data-role="button">Sign up</a>
 				</div>
-			</fieldset><!--end filedset-->
+			</div><!--end ui grid a-->
+
+			<a href="#create-a-note" data-role="button" style="margin:15px 5px;"  data-theme="a">Create a note</a>
 
 		</div><!-- end content -->		
 	</div><!--end home page-->	
@@ -75,7 +76,25 @@
 	-->
 
 	<div data-role="page" id="create-a-note">
+		<div data-role="panel" id="options-menu-panel" data-display="push" data-dismissible="false">
+
+			<div data-role="content">
+				
+			</div><!--end panel content-->
+
+		</div><!--end panel-->
+
+		<div data-role="header">
+			<!--btn for panel-->
+			<div class="ui-btn-left" data-role="controlgroup" data-type="horizontal">
+				<a href="#options-menu-panel" data-role="button" data-icon="bars" data-iconpos="notext" data-iconpos="right">Options</a>
+			</div>
+			<h1></h1>
+		</div><!--end header-->
+
 		<div data-role="content">
+
+
 			
 		</div><!-- end content -->
 	</div><!--end create a note page-->	
