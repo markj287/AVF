@@ -1,5 +1,5 @@
 
-var mjTwitterApi = function searchTwitter(query) {
+var mjTwitterApi = function (query) {
     $.ajax({
         url: 'http://search.twitter.com/search.json?' + jQuery.param(query),
         dataType: 'jsonp',
@@ -23,3 +23,7 @@ $(document).ready(function() {
         mjTwitterApi (params);
     });
 });
+
+var jsonFlickrFeed = function (data){
+    console.log(data);
+}
