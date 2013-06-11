@@ -24,6 +24,6 @@ $(document).ready(function() {
     });
 });
 
-var jsonFlickrFeed = function (data){
+ function  listVideos(data){
     console.log(data);
 }
