@@ -252,7 +252,35 @@
 	-->
 
 	<div data-role="page" id="view-flickr">
+		<div data-role="panel" id="view-flickr-menu" data-display="push" data-theme="b">
+
+			<ul data-role="listview">
+			    <li class="ui-icon-alt"><a href="#my-notes"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">My Notes</a></li>
+			    <li class="ui-icon-alt"><a href="#notebooks"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">Notebooks</a></li>
+			    <li class="ui-icon-alt"><a href="#"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">View twitter API</a></li>
+			    <li class="ui-icon-alt"><a href="#view-flick"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">View flickr API</a></li>
+			    <li class="ui-icon-alt"><a href="#sign-up"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">Sign Up</a></li>
+			</ul><!--end list view-->
+
+			<div data-role="content">
+
+			</div><!--end panel content-->
+
+		</div><!--end panel-->
+
+		<div data-role="header">
+			<!--btn for panel-->
+			<div class="ui-btn-left" data-role="controlgroup" data-type="horizontal">
+				<a href="#view-flickr-menu" data-role="button" data-icon="bars" data-iconpos="notext" data-iconpos="right">Options</a>
+			</div>
+
+			<h1></h1>
+		</div><!--end header-->
+
 		<div data-role="content">
+			<div id="images">
+				
+			</div>
 			
 		</div><!-- end content -->		
 	</div><!--end view flickr page-->	
@@ -270,7 +298,6 @@
 <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="http://gdata.youtube.com/feeds/users/markj287/uploads?alt=json-in-script&max-results=15&callback=listVideos"></script>
 <script type="text/javascript">
   app.initialize();
 </script>

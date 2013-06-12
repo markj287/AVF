@@ -1,13 +1,12 @@
-
-var mjTwitterApi = function (query) {
+var searchTwitter = function (query) {
     $.ajax({
-        url: 'http://search.twitter.com/search.json?' + jQuery.param(query),
+        url: 'https://api.twitter.com/1.1/search/tweets.json' + jQuery.param(query),
         dataType: 'jsonp',
         success: function(data) {
             var tweets = $('#tweets');
             tweets.html('');
             for (res in data['results']) {
-                tweets.append('<ul data-role="listview">' + data['results'][res]['from_user'] + ' wrote: <li>' + '<a>' + data['results'][res]['text'] + '</a>' + '</li></ul><br />');
+                tweets.append('<div>' + data['results'][res]['from_user'] + ' wrote: <p>' + data['results'][res]['text'] + '</p></div><br />');
             }
         }
     });
@@ -17,13 +16,26 @@ $(document).ready(function() {
     $('#submit').click(function() {
         var params = {
             q: $('#query').val(),
-            count: 10
+            rpp: 15
         };
-        //alert(jQuery.param(params));
-        mjTwitterApi (params);
+        // alert(jQuery.param(params));
+        searchTwitter(params);
     });
 });
 
- function  listVideos(data){
-    console.log(data);
-}
+(function() {
+  var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+  $.getJSON( flickerAPI, {
+    tags: "waterfalls",
+    tagmode: "any",
+    format: "json"
+  })
+  .done(function( data ) {
+    $.each( data.items, function( i, item ) {
+      $( "<img/>" ).attr( "src", item.media.m ).appendTo( "#images" );
+      if ( i === 3 ) {
+        return false;
+      }
+    });
+  });
+})();
