@@ -27,6 +27,11 @@
 	background-image: linear-gradient(#f9f9f9, #eeeeee);
 }
 
+#view-flickr img {
+	margin: auto;
+	padding: 20px;
+}
+
 #create-a-note  .ui-panel {
 	background: #444;
 }
@@ -43,4 +48,17 @@
     		color: #aabbcc !important;
     		*/
 	}  
+
+	#view-flickr img {
+		padding: 5px;
+		display: inline-block;
+	}
 }
+
+
+
+
+
+
+
+

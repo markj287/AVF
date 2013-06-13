@@ -7,9 +7,8 @@ var showpics = function (){
 
   $.each(data.items, function(i,item) {
     var img = $("<img/>");
-      img.attr('margin','20px');
-      img.attr('width','100%');
-      img.attr('height','400px');
+      img.attr('width','300px');
+      img.attr('height','300px');
       img.attr("src", item.media.m).appendTo("#images");
     });
   });
