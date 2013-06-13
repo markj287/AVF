@@ -82,7 +82,7 @@
 			    <li class="ui-icon-alt"><a href="#my-notes"><img src="../img/gf.png"  class="ui-li-icon ui-corner-none">My Notes</a></li>
 			    <li class="ui-icon-alt"><a href="#notebooks"><img src="../img/gf.png"  class="ui-li-icon ui-corner-none">Notebooks</a></li>
 			    <li class="ui-icon-alt"><a href="#view-twitter"><img src="../img/gf.png"  class="ui-li-icon ui-corner-none">View twitter API</a></li>
-			    <li class="ui-icon-alt"><a href="#view-flickr"><img src="../img/gf.png"  class="ui-li-icon ui-corner-none">View facebook API</a></li>
+			    <li class="ui-icon-alt"><a href="#view-flickr"><img src="../img/gf.png"  class="ui-li-icon ui-corner-none">View Flickr API</a></li>
 			    <li class="ui-icon-alt"><a href="#sign-up"><img src="../img/gf.png"  class="ui-li-icon ui-corner-none">Sign Up</a></li>
 			</ul><!--end list view-->
 
@@ -142,7 +142,7 @@
 			    <li class="ui-icon-alt"><a href="#"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">My Notes</a></li>
 			    <li class="ui-icon-alt"><a href="#notebooks"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">Notebooks</a></li>
 			    <li class="ui-icon-alt"><a href="#view-twitter"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">View twitter API</a></li>
-			    <li class="ui-icon-alt"><a href="#view-flickr"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">View facebook API</a></li>
+			    <li class="ui-icon-alt"><a href="#view-flickr"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">View Flickr API</a></li>
 			    <li class="ui-icon-alt"><a href="#sign-up"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">Sign Up</a></li>
 			</ul><!--end list view-->
 
@@ -178,7 +178,7 @@
 			    <li class="ui-icon-alt"><a href="#my-notes"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">My Notes</a></li>
 			    <li class="ui-icon-alt"><a href="#"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">Notebooks</a></li>
 			    <li class="ui-icon-alt"><a href="#view-twitter"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">View twitter API</a></li>
-			    <li class="ui-icon-alt"><a href="#view-flick"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">View facebook API</a></li>
+			    <li class="ui-icon-alt"><a href="#view-flick"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">View Flickr API</a></li>
 			    <li class="ui-icon-alt"><a href="#sign-up"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">Sign Up</a></li>
 			</ul><!--end list view-->
 
@@ -214,7 +214,7 @@
 			    <li class="ui-icon-alt"><a href="#my-notes"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">My Notes</a></li>
 			    <li class="ui-icon-alt"><a href="#notebooks"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">Notebooks</a></li>
 			    <li class="ui-icon-alt"><a href="#"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">View twitter API</a></li>
-			    <li class="ui-icon-alt"><a href="#view-flick"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">View facebook API</a></li>
+			    <li class="ui-icon-alt"><a href="#view-flick"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">View Flickr API</a></li>
 			    <li class="ui-icon-alt"><a href="#sign-up"><img src="../../_assets/img/gf.png"  class="ui-li-icon ui-corner-none">Sign Up</a></li>
 			</ul><!--end list view-->
 
@@ -278,9 +278,15 @@
 		</div><!--end header-->
 
 		<div data-role="content">
-			<div id="images">
-				
-			</div>
+			<h1>Flickr Search</h1>
+			<hr>
+			<p>Search for images</p>
+
+			<input id="box" type="text">
+    			<input id="Button" title="Search" onclick="showpics()" type="button" value="Search" data-theme="a">
+
+    			<div id="images" style="padding: 20px 0; margin: 30px 0;">
+    			</div>
 			
 		</div><!-- end content -->		
 	</div><!--end view flickr page-->	
