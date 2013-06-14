@@ -63,8 +63,8 @@
 		float: left;
 		margin: 40px 10px;
 		border: 10px solid rgba(0,0,0,0.1);
-		max-width: 400px;
-		max-height: 400px;
+		max-width: 280px;
+		max-height: 280px;
 	}
 
 	#view-flickr img {
