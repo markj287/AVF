@@ -38,17 +38,23 @@
 }
 
 #view-instagram li img {
-	margin: 10px;
-	border: 10px solid rgba(0,0,0,0.1);
+	margin: 23px;
+	border: 10px solid rgba(0,0,0,0.5);
+	border-radius: 4px;
 	max-width: 100%;
 	max-height: 400px;
+}
+
+#view-instagram #instaImages {
+	width:1120px; 
+	margin: 10px auto; 
 }
 
 #create-a-note  .ui-panel {
 	background: #444;
 }
 
-#create-a-note  .ui-listview{
+#create-a-note  .ui-listview {
 	background: #444;
 	padding: 0;
 }
@@ -56,12 +62,20 @@
 /*Ipad Retina CSS*/
 @media only screen and (-webkit-min-device-pixel-ratio:2) {
 	#view-instagram li {
-		list-style-type: none; display: inline;
+		list-style-type: none; 
+		display: inline;
 	}
+
+	#view-instagram #instaImages {
+		width:1120px; 
+		margin: 10px auto; 
+	}
+
 
 	#view-instagram li img {
 		float: left;
-		margin: 40px 10px;
+		margin: 23px;
+		border-radius: 4px;
 		border: 10px solid rgba(0,0,0,0.1);
 		max-width: 280px;
 		max-height: 280px;

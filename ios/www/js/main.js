@@ -32,9 +32,9 @@ var showInstPics = function(info){
   
     
     $.each(info.data, function(index, photo){
-      var pic = "<li><img src=' " + photo.images.standard_resolution.url + " ' alt=' " + photo.user.id + " ' /></li>";
+    	var pic = "<li><img src=' " + photo.images.low_resolution.url + " ' alt=' " + photo.user.id + " ' /></li>";
         
-        $("#instaImages").append(pic);
+       $("#instaImages").append(pic);
         
     });
     
