@@ -48,24 +48,23 @@ var app = {
     }
 };
 
-//////////////////////// mj custom scripts 
+/********************
+ mj custom scripts 
+ ********************/
 
-/*
+/* flexislider*/
 $(window).load(function(){
+
     $('.flexslider').flexslider({
         animation: "slide",
         start: function(slider){
             $('body').removeClass('loading');
         }
     });
+    
 });
-*/
 
-$(document).ready(function($) {
-   
-    //alert("Welcome to Note Buddy");
 
-});
 
 
 

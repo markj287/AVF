@@ -38,7 +38,7 @@
 }
 
 #view-instagram li img {
-	margin: 23px;
+	margin: 10px;
 	border: 10px solid rgba(0,0,0,0.5);
 	border-radius: 4px;
 	max-width: 100%;
@@ -46,7 +46,7 @@
 }
 
 #view-instagram #instaImages {
-	width:1120px; 
+	width:100%; 
 	margin: 10px auto; 
 }
 
@@ -67,14 +67,14 @@
 	}
 
 	#view-instagram #instaImages {
-		width:1120px; 
+		width:100%; 
 		margin: 10px auto; 
 	}
 
 
 	#view-instagram li img {
 		float: left;
-		margin: 23px;
+		margin: 10px;
 		border-radius: 4px;
 		border: 10px solid rgba(0,0,0,0.1);
 		max-width: 280px;

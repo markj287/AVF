@@ -1,0 +1,96 @@
+/*
+	Author: Mark Johnson
+	Claas: AVF 1306
+*/
+
+#home  {
+    background: url(../img/black-bg.png) repeat scroll 50% 50% #112233 !important;
+    color: #aabbcc !important;
+}  
+
+#home .logo  {
+	vertical-align: middle;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+#create-a-note textarea {
+	height:500px;
+	box-shadow:0px 0px 0px #fff;
+	border: 0px solid #fff;
+ 	background: #f9f9f9;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f9f9f9), to(#eeeeee));
+	background-image: -webkit-linear-gradient(#f9f9f9, #eeeeee);
+	background-image: -moz-linear-gradient(#f9f9f9, #eeeeee);
+	background-image: -o-linear-gradient(#f9f9f9, #eeeeee);
+	background-image: linear-gradient(#f9f9f9, #eeeeee);
+}
+
+#view-flickr img {
+	margin: auto;
+	padding: 20px;
+}
+
+#view-instagram li {
+	list-style-type: none; 
+	display: inline;
+}
+
+#view-instagram li img {
+	margin: 10px;
+	border: 10px solid rgba(0,0,0,0.5);
+	border-radius: 4px;
+	max-width: 100%;
+	max-height: 400px;
+}
+
+#view-instagram #instaImages {
+	width:100%; 
+	margin: 10px auto; 
+}
+
+#create-a-note  .ui-panel {
+	background: #444;
+}
+
+#create-a-note  .ui-listview {
+	background: #444;
+	padding: 0;
+}
+
+/*Ipad Retina CSS*/
+@media only screen and (-webkit-min-device-pixel-ratio:2) {
+	#view-instagram li {
+		list-style-type: none; 
+		display: inline;
+	}
+
+	#view-instagram #instaImages {
+		width:100%; 
+		margin: 10px auto; 
+	}
+
+
+	#view-instagram li img {
+		float: left;
+		margin: 10px;
+		border-radius: 4px;
+		border: 10px solid rgba(0,0,0,0.1);
+		max-width: 280px;
+		max-height: 280px;
+	}
+
+	#view-flickr img {
+		padding: 5px;
+		display: inline-block;
+	}
+}
+
+
+
+
+
+
+
+
