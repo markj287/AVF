@@ -15,8 +15,14 @@
 	margin-bottom: 50px;
 }
 
+.offline {
+	visibility:  hidden;
+	color: #f00;
+	font-style: italic;
+}
+
 #create-a-note textarea {
-	height:500px;
+	height:300px;
 	box-shadow:0px 0px 0px #fff;
 	border: 0px solid #fff;
  	background: #f9f9f9;
@@ -69,6 +75,10 @@
 	#view-instagram #instaImages {
 		width:100%; 
 		margin: 10px auto; 
+	}
+
+	#create-a-note textarea {
+		height: 500px;
 	}
 
 

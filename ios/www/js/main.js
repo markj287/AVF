@@ -1,3 +1,16 @@
+function onload() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+
+       
+}
+
+function onDeviceReady(){
+	
+	
+}
+
+
 // flickr function
 var showpics = function (){
 
@@ -40,13 +53,3 @@ var showInstPics = function(info){
     });
     
 };
-
-function init() {
-        document.addEventListener("deviceready", onDeviceReady, false);
-}
-
-function onDeviceReady(){
-	alert("it works!");
-}
-
-
