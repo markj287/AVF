@@ -4,9 +4,10 @@
 */
 
 #create-a-note #noteimage {
-	width: 500px; 
+	width: 100%; 
 	height: 500px; 
 	display: none;
+	border: 1px solid #4d4d4d;
 }
 
 #home  {
