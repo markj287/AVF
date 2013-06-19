@@ -25,10 +25,11 @@
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.1.min.css" />
         <link rel="stylesheet" type="text/css" href="css/themes/note-buddy.min.css" />      
         <link rel="stylesheet" type="text/css" href="css/master.css" />
+        <link href="http://code.google.com/apis/maps/documentation/javascript/examples/defeault.css" rel="stylesheet" type="text/css" />
         <title>Note Buddy</title>
     </head>
 
-<body onload="init()">
+<body>
 
 <div class="app">
 	
@@ -149,17 +150,22 @@
 
 			</div><!--end popup-->
 
-			<form>
+			<!--<form>-->
 				<!--<label for="textarea">New Note:</label>-->
-				<textarea cols="100" rows="40" name="textarea" id="textarea" placeholder="Add some text"></textarea>
+				<textarea cols="100" rows="40" name="textarea" id="textarea" placeholder="Add some text">
+				</textarea>
+				<img src="" id="noteimage" />
+				<div id="map" style="width:100%; height:200px; border:1px solid #000;"></div>
 
 				<hr>   
+
+				<button data-theme="b" data-inline="true" id="addphoto">Add Image</button>
 
 				<p>
 					<button type="submit" data-theme="b" data-inline="true" class="save-btn">Done</button>
 					<button type="reset" data-theme="d" data-inline="true">Cencel</button>
 				</p>
-			</form> <!--end form-->	
+			<!--</form> end form-->	
 
 		</div><!-- end content -->
 	</div><!--end create a note page-->	
@@ -335,6 +341,7 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.mobile-1.3.1.min.js"></script>
 <script type="text/javascript" src="cordova-2.7.0.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV-Yu2jVNxyCSkShZlUR_owqcMAElquEQ&sensor=true"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript">
@@ -343,17 +350,68 @@
 
 
 <script type="text/javascript">
-      	function init(){
-      		document.addEventListener("deviceready", onDeviceReady, false);
-      	}
+$(document).on("pageinit", function(){
 
-      	function onDeviceReady(){
-      		var networkstate = navigator.connection.type;
+	$("#create-a-note").on("pageshow", function(){
+		navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
+	});
+	
+	// tap event is jqm specific event, better than using click event. Its more effcient
+	$("#addphoto").bind("tap",function(){
+		// creates an object for options
+		// sourceType lets the user switch between using the camera of the photo library
+		// destinationType lets the me reference the file in the file or as a data url, use file uri instead for best results
+		var options = {sourceType:Camera.PictureSourceType.PHOTOLIBRARY, 
+		destinationType: Camera.DestinationType.FILE_URI};
+		
+		// the method take 3 parameters. function that is call if sucessful, function that is called if failed and the options function we created above
+		navigator.camera.getPicture(onCameraSuccess, onError, options);
+	});
+	
+}); // end pageinit funtion
 
-		if(networkstate == "none"){
-			$(".offline").css("visibility","visible");
-		}
-      	}
+function onLoad(){
+	document.addEventListener("deviceready", onDeviceReady, false);
+}
+
+function onDeviceReady(){
+	console.log("yay, it works!");	
+}
+
+function onGeoSuccess(position){
+	lat = position.coords.latitude;
+	lon = position.coords.longitude;
+	var currentposition = new google.maps.LatLng(lat,lon);
+
+	var mapoptions = {
+		zoom: 12,
+		center: currentposition,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+
+	var map = new google.maps.Map(document.getElementById("map"), mapoptions);
+
+	var marker = new google.maps.Marker({
+		position: currentposition,
+		map: map
+	});
+}
+
+function onGeoError(error){
+	if(error == 1){
+		alert("Please turn on your GPS");
+	}
+}
+
+function onCameraSuccess(imageURI){
+	// create note image id
+	$("#noteimage").attr("src", imageURI);
+	$("#noteimage").css("display", "block");
+}
+
+function onError(message){
+	alert(message);
+}
 </script>
 
 </body>

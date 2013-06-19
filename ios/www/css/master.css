@@ -3,6 +3,12 @@
 	Claas: AVF 1306
 */
 
+#create-a-note #noteimage {
+	width: 500px; 
+	height: 500px; 
+	display: none;
+}
+
 #home  {
     background: url(../img/black-bg.png) repeat scroll 50% 50% #112233 !important;
     color: #aabbcc !important;
