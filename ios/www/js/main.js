@@ -1,15 +1,3 @@
-function onload() {
-        document.addEventListener("deviceready", onDeviceReady, false);
-
-
-       
-}
-
-function onDeviceReady(){
-	
-	
-}
-
 
 // flickr function
 var showpics = function (){

@@ -93,10 +93,24 @@
 				<a href="#sign-up-menu" data-role="button" data-icon="bars" data-iconpos="notext" data-iconpos="right">Options</a>
 			</div>
 
+			<div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
+				<a href="#note-opts" data-role="button" data-icon="gear" data-iconpos="notext" data-iconpos="right" data-rel="popup" data-transition="slidedown">Note Options</a>
+			</div>
+
 			<h1></h1>
 		</div><!--end header-->
 
 		<div data-role="content">
+			<div data-role="popup" id="note-opts" data-theme="d">
+
+				<ul data-role="listview" data-inset="true" style="min-width:50px;" data-theme="d">
+					<li data-role="divider" data-theme="a">Choose an action</li>
+					<li data-icon="plus" class="ui-icon-alt"><a href="#create-a-note">New Note</a></li>
+				</ul> <!--end listview -->
+
+			</div><!--end popup-->
+
+
 			<a href="#" data-role="button" data-theme="a">Sign in with twitter</a>
 			<a href="#" data-role="button" data-theme="a">Sign in with facebook</a>
 			<p style="margin: 20px 0; text-align:center;">Or</p>
@@ -135,6 +149,7 @@
 			<div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
 				<a href="#note-opts" data-role="button" data-icon="gear" data-iconpos="notext" data-iconpos="right" data-rel="popup" data-transition="slidedown">Note Options</a>
 			</div>
+
 			<h1></h1>
 		</div><!--end header-->
 
@@ -143,16 +158,15 @@
 
 				<ul data-role="listview" data-inset="true" style="min-width:50px;" data-theme="d">
 					<li data-role="divider" data-theme="a">Choose an action</li>
-					<li data-icon="plus" class="ui-icon-alt"><a href="#create-a-note">New Note</a></li>
-					<li data-icon="alert" class="ui-icon-alt"><a href="#">Attach Image</a></li>
-					<li data-icon="delete" class="ui-icon-alt"><a href="#">Delete</a></li>
+					<li data-icon="plus" class="ui-icon-alt"><a href="#" id="addphoto">Attach Photo</a></li>
+					<li data-icon="plus" class="ui-icon-alt"><a href="#" onclick="showConfirm(); return false;">Delete Photo</a></li>
 				</ul> <!--end listview -->
 
 			</div><!--end popup-->
 
 			<!--<form>-->
 				<!--<label for="textarea">New Note:</label>-->
-				<textarea cols="100" rows="40" name="textarea" id="textarea" placeholder="Add some text">
+				<textarea cols="40" rows="40" name="textarea" id="textarea" placeholder="Add some text">
 				</textarea>
 				<img src="" id="noteimage" />
 				<div id="map" style=""></div>
@@ -160,8 +174,8 @@
 				<hr>   
 
 				<p>
-					<button data-theme="b" data-inline="true" id="addphoto">Add Image</button>
-					<button data-theme="b" data-inline="true" onclick="showConfirm(); return false;">Delete Image</button>
+			
+					<button data-theme="b" data-inline="true" >Delete Image</button>
 				</p>
 				<p>
 					<button type="submit" data-theme="b" data-inline="true" class="save-btn">Done</button>
@@ -199,11 +213,22 @@
 				<a href="#my-notes-menu" data-role="button" data-icon="bars" data-iconpos="notext" data-iconpos="right">Options</a>
 			</div>
 
+			<div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
+				<a href="#note-opts" data-role="button" data-icon="gear" data-iconpos="notext" data-iconpos="right" data-rel="popup" data-transition="slidedown">Note Options</a>
+			</div>
+
 			<h1></h1>
 		</div><!--end header-->
 
 		<div data-role="content">
-			
+			<div data-role="popup" id="note-opts" data-theme="d">
+
+				<ul data-role="listview" data-inset="true" style="min-width:50px;" data-theme="d">
+					<li data-role="divider" data-theme="a">Choose an action</li>
+					<li data-icon="plus" class="ui-icon-alt"><a href="#create-a-note">New Note</a></li>
+				</ul> <!--end listview -->
+
+			</div><!--end popup-->
 			
 		</div><!-- end content -->
 	</div><!--end my notes page-->	
@@ -234,11 +259,23 @@
 			<div class="ui-btn-left" data-role="controlgroup" data-type="horizontal">
 				<a href="#notebooks-menu" data-role="button" data-icon="bars" data-iconpos="notext" data-iconpos="right">Options</a>
 			</div>
+
+			<div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
+				<a href="#note-opts" data-role="button" data-icon="gear" data-iconpos="notext" data-iconpos="right" data-rel="popup" data-transition="slidedown">Note Options</a>
+			</div>
 			
 			<h1></h1>
 		</div><!--end header-->
 
 		<div data-role="content">
+			<div data-role="popup" id="note-opts" data-theme="d">
+
+				<ul data-role="listview" data-inset="true" style="min-width:50px;" data-theme="d">
+					<li data-role="divider" data-theme="a">Choose an action</li>
+					<li data-icon="plus" class="ui-icon-alt"><a href="#create-a-note">New Note</a></li>
+				</ul> <!--end listview -->
+
+			</div><!--end popup-->
 
 			
 		</div><!-- end content -->
@@ -271,10 +308,22 @@
 				<a href="#view-instagram-menu" data-role="button" data-icon="bars" data-iconpos="notext" data-iconpos="right">Options</a>
 			</div>
 
+			<div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
+				<a href="#note-opts" data-role="button" data-icon="gear" data-iconpos="notext" data-iconpos="right" data-rel="popup" data-transition="slidedown">Note Options</a>
+			</div>
+
 			<h1>Instagram Serach</h1>
 		</div><!--end header-->
 
 		<div data-role="content">
+			<div data-role="popup" id="note-opts" data-theme="d">
+
+				<ul data-role="listview" data-inset="true" style="min-width:50px;" data-theme="d">
+					<li data-role="divider" data-theme="a">Choose an action</li>
+					<li data-icon="plus" class="ui-icon-alt"><a href="#create-a-note">New Note</a></li>
+				</ul> <!--end listview -->
+
+			</div><!--end popup-->
 			
 			<label for="text-basic"></label>
 			<p>Enter a search term at your own risk!</p>
@@ -316,10 +365,23 @@
 				<a href="#view-flickr-menu" data-role="button" data-icon="bars" data-iconpos="notext" data-iconpos="right">Options</a>
 			</div>
 
+			<div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
+				<a href="#note-opts" data-role="button" data-icon="gear" data-iconpos="notext" data-iconpos="right" data-rel="popup" data-transition="slidedown">Note Options</a>
+			</div>
+
 			<h1></h1>
 		</div><!--end header-->
 
 		<div data-role="content">
+			<div data-role="popup" id="note-opts" data-theme="d">
+
+				<ul data-role="listview" data-inset="true" style="min-width:50px;" data-theme="d">
+					<li data-role="divider" data-theme="a">Choose an action</li>
+					<li data-icon="plus" class="ui-icon-alt"><a href="#create-a-note">New Note</a></li>
+				</ul> <!--end listview -->
+
+			</div><!--end popup-->
+
 			<h1>Flickr Search</h1>
 			<hr>
 			<p>Search for images</p>
