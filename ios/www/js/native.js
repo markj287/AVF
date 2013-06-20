@@ -30,7 +30,7 @@ var onConfirm = function(buttonIndex){
 	if(buttonIndex == 1){
 		$("#noteimage").remove(); //buttonIndex 1
 		alert("Picture was removed!");
-		location.reload();
+		//location.reload();
 	}else {
 		navigator.notification.alert("Picture was not deleted"); // buttonIndex 2
 	}
