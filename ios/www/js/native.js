@@ -23,7 +23,27 @@ var onLoad = function (){
 }
 
 var onDeviceReady = function (){
-	navigator.notification.alert("yay it works");
+	
+}
+
+var onConfirm = function(buttonIndex){
+	if(buttonIndex == 1){
+		$("#noteimage").remove(); //buttonIndex 1
+		alert("Picture was removed!");
+	}else {
+		navigator.notification.alert("Picture was not deleted"); // buttonIndex 2
+	}
+
+	
+}
+
+function showConfirm(){
+	navigator.notification.confirm(
+		"Remove Picture",
+		onConfirm, 
+		"Are you sure you want to remove this picture?",
+		"Delete, Cancel"
+	);
 }
 
 var onGeoSuccess = function (position){
