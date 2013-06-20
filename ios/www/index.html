@@ -344,75 +344,11 @@
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV-Yu2jVNxyCSkShZlUR_owqcMAElquEQ&sensor=true"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/native.js"></script>
 <script type="text/javascript">
   app.initialize();
 </script>
 
-
-<script type="text/javascript">
-$(document).on("pageinit", function(){
-
-	$("#create-a-note").on("pageshow", function(){
-		navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
-	});
-	
-	// tap event is jqm specific event, better than using click event. Its more effcient
-	$("#addphoto").bind("tap",function(){
-		// creates an object for options
-		// sourceType lets the user switch between using the camera of the photo library
-		// destinationType lets the me reference the file in the file or as a data url, use file uri instead for best results
-		var options = {sourceType:Camera.PictureSourceType.PHOTOLIBRARY, 
-		destinationType: Camera.DestinationType.FILE_URI};
-		
-		// the method take 3 parameters. function that is call if sucessful, function that is called if failed and the options function we created above
-		navigator.camera.getPicture(onCameraSuccess, onError, options);
-	});
-	
-}); // end pageinit funtion
-
-function onLoad(){
-	document.addEventListener("deviceready", onDeviceReady, false);
-}
-
-function onDeviceReady(){
-	navigator.notification.alert("yay it works");
-}
-
-function onGeoSuccess(position){
-	lat = position.coords.latitude;
-	lon = position.coords.longitude;
-	var currentposition = new google.maps.LatLng(lat,lon);
-
-	var mapoptions = {
-		zoom: 12,
-		center: currentposition,
-		mapTypeId: google.maps.MapTypeId.ROADMAP
-	};
-
-	var map = new google.maps.Map(document.getElementById("map"), mapoptions);
-
-	var marker = new google.maps.Marker({
-		position: currentposition,
-		map: map
-	});
-}
-
-function onGeoError(error){
-	if(error == 1){
-		alert("Please turn on your GPS");
-	}
-}
-
-function onCameraSuccess(imageURI){
-	// create note image id
-	$("#noteimage").attr("src", imageURI);
-	$("#noteimage").css("display", "block");
-}
-
-function onError(message){
-	alert(message);
-}
-</script>
 
 </body>
 </html>
