@@ -3,6 +3,20 @@
 	Claas: AVF 1306
 */
 
+#create-a-note #noteimage {
+	width: 100%; 
+	height: 200px; 
+	display: none;
+	border: 1px solid #4d4d4d;
+}
+
+#create-a-note #map {
+	margin: 20px 0; 
+	width: 100%; 
+	height: 200px; 
+	border: 1px solid #000;
+}
+
 #home  {
     background: url(../img/black-bg.png) repeat scroll 50% 50% #112233 !important;
     color: #aabbcc !important;
@@ -15,8 +29,14 @@
 	margin-bottom: 50px;
 }
 
+.offline {
+	visibility:  hidden;
+	color: #f00;
+	font-style: italic;
+}
+
 #create-a-note textarea {
-	height:500px;
+	height:300px;
 	box-shadow:0px 0px 0px #fff;
 	border: 0px solid #fff;
  	background: #f9f9f9;
@@ -69,6 +89,24 @@
 	#view-instagram #instaImages {
 		width:100%; 
 		margin: 10px auto; 
+	}
+
+	#create-a-note textarea {
+		height: 500px;
+	}
+
+	#create-a-note #map {
+		margin: 20px 0; 
+		width: 100%; 
+		height: 300px; 
+		border: 1px solid #000;
+	}
+
+	#create-a-note #noteimage {
+		width: 100%; 
+		height: 500px; 
+		display: none;
+		border: 1px solid #4d4d4d;
 	}
 
 

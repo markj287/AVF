@@ -18,13 +18,17 @@ $(document).on("pageinit", function(){
 	
 }); // end pageinit funtion
 
-var onLoad = function (){
+function init(){
 	document.addEventListener("deviceready", onDeviceReady, false);
 }
 
-var onDeviceReady = function (){
-	
+function onDeviceReady(){
+	document.addEventListener("offline", onOffline, false);
 }
+
+function onOffline() {
+ 	navigator.notification.alert("Please connect to the internet to sync your notes");   
+ }
 
 var onConfirm = function(buttonIndex){
 	if(buttonIndex == 1){

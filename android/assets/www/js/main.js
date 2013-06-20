@@ -1,3 +1,4 @@
+
 // flickr function
 var showpics = function (){
 
@@ -5,6 +6,7 @@ var showpics = function (){
 
 	$.getJSON('http://api.flickr.com/services/feeds/photos_public.gne?tags=' + pic + "&tagmode=any&format=json&jsoncallback=?",
 	function(data){ $("#images").hide().html(data).fadeIn('fast');
+
 
 		$.each(data.items, function(i,item) {
 			var img = $("<img/>");

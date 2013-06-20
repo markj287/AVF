@@ -21,14 +21,16 @@
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=device-dpi" />
+        <meta name="viewport" content=" initial-scale=1, width=device-width, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.1.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/themes/note-buddy.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/flexslider.css" />       
+        <link rel="stylesheet" type="text/css" href="css/themes/note-buddy.min.css" />      
         <link rel="stylesheet" type="text/css" href="css/master.css" />
+        <link href="http://code.google.com/apis/maps/documentation/javascript/examples/defeault.css" rel="stylesheet" type="text/css" />
         <title>Note Buddy</title>
     </head>
-<body>
+
+<body onload="onDeviceReady()">
+<!-- user-scalable=no, maximum-scale=1, minimum-scale=1, -->
 
 <div class="app">
 	
@@ -48,7 +50,11 @@
 
 			<a href="#create-a-note" data-role="button" style="margin:15px 5px;"  data-theme="a">Create a note</a>
 
-		</div><!-- end content -->		
+		</div><!-- end content -->	
+
+		<div class="offline" data-role="footer" data-position="fixed">
+			<h3>Your app is offline</h3>
+		</div>	
 	</div><!--end home page-->	
 
 	<!--
@@ -88,10 +94,24 @@
 				<a href="#sign-up-menu" data-role="button" data-icon="bars" data-iconpos="notext" data-iconpos="right">Options</a>
 			</div>
 
+			<div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
+				<a href="#note-opts" data-role="button" data-icon="gear" data-iconpos="notext" data-iconpos="right" data-rel="popup" data-transition="slidedown">Note Options</a>
+			</div>
+
 			<h1></h1>
 		</div><!--end header-->
 
 		<div data-role="content">
+			<div data-role="popup" id="note-opts" data-theme="d">
+
+				<ul data-role="listview" data-inset="true" style="min-width:50px;" data-theme="d">
+					<li data-role="divider" data-theme="a">Choose an action</li>
+					<li data-icon="plus" class="ui-icon-alt"><a href="#create-a-note">New Note</a></li>
+				</ul> <!--end listview -->
+
+			</div><!--end popup-->
+
+
 			<a href="#" data-role="button" data-theme="a">Sign in with twitter</a>
 			<a href="#" data-role="button" data-theme="a">Sign in with facebook</a>
 			<p style="margin: 20px 0; text-align:center;">Or</p>
@@ -130,6 +150,7 @@
 			<div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
 				<a href="#note-opts" data-role="button" data-icon="gear" data-iconpos="notext" data-iconpos="right" data-rel="popup" data-transition="slidedown">Note Options</a>
 			</div>
+
 			<h1></h1>
 		</div><!--end header-->
 
@@ -138,16 +159,18 @@
 
 				<ul data-role="listview" data-inset="true" style="min-width:50px;" data-theme="d">
 					<li data-role="divider" data-theme="a">Choose an action</li>
-					<li data-icon="plus" class="ui-icon-alt"><a href="#create-a-note">New Note</a></li>
-					<li data-icon="alert" class="ui-icon-alt"><a href="#">Attach Image</a></li>
-					<li data-icon="delete" class="ui-icon-alt"><a href="#">Delete</a></li>
+					<li data-icon="plus" class="ui-icon-alt"><a href="#" id="addphoto">Attach Photo</a></li>
+					<li data-icon="plus" class="ui-icon-alt"><a href="#" onclick="showConfirm(); return false;">Delete Photo</a></li>
 				</ul> <!--end listview -->
 
 			</div><!--end popup-->
 
-			<form>
+			<!--<form>-->
 				<!--<label for="textarea">New Note:</label>-->
-				<textarea cols="100" rows="40" name="textarea" id="textarea" placeholder="Add some text"></textarea>
+				<textarea cols="40" rows="40" name="textarea" id="textarea" placeholder="Add some text">
+				</textarea>
+				<img src="" id="noteimage" />
+				<div id="map" style=""></div>
 
 				<hr>   
 
@@ -155,7 +178,7 @@
 					<button type="submit" data-theme="b" data-inline="true" class="save-btn">Done</button>
 					<button type="reset" data-theme="d" data-inline="true">Cencel</button>
 				</p>
-			</form> <!--end form-->	
+			<!--</form> end form-->	
 
 		</div><!-- end content -->
 	</div><!--end create a note page-->	
@@ -187,11 +210,22 @@
 				<a href="#my-notes-menu" data-role="button" data-icon="bars" data-iconpos="notext" data-iconpos="right">Options</a>
 			</div>
 
+			<div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
+				<a href="#note-opts" data-role="button" data-icon="gear" data-iconpos="notext" data-iconpos="right" data-rel="popup" data-transition="slidedown">Note Options</a>
+			</div>
+
 			<h1></h1>
 		</div><!--end header-->
 
 		<div data-role="content">
-			
+			<div data-role="popup" id="note-opts" data-theme="d">
+
+				<ul data-role="listview" data-inset="true" style="min-width:50px;" data-theme="d">
+					<li data-role="divider" data-theme="a">Choose an action</li>
+					<li data-icon="plus" class="ui-icon-alt"><a href="#create-a-note">New Note</a></li>
+				</ul> <!--end listview -->
+
+			</div><!--end popup-->
 			
 		</div><!-- end content -->
 	</div><!--end my notes page-->	
@@ -222,11 +256,23 @@
 			<div class="ui-btn-left" data-role="controlgroup" data-type="horizontal">
 				<a href="#notebooks-menu" data-role="button" data-icon="bars" data-iconpos="notext" data-iconpos="right">Options</a>
 			</div>
+
+			<div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
+				<a href="#note-opts" data-role="button" data-icon="gear" data-iconpos="notext" data-iconpos="right" data-rel="popup" data-transition="slidedown">Note Options</a>
+			</div>
 			
 			<h1></h1>
 		</div><!--end header-->
 
 		<div data-role="content">
+			<div data-role="popup" id="note-opts" data-theme="d">
+
+				<ul data-role="listview" data-inset="true" style="min-width:50px;" data-theme="d">
+					<li data-role="divider" data-theme="a">Choose an action</li>
+					<li data-icon="plus" class="ui-icon-alt"><a href="#create-a-note">New Note</a></li>
+				</ul> <!--end listview -->
+
+			</div><!--end popup-->
 
 			
 		</div><!-- end content -->
@@ -259,10 +305,22 @@
 				<a href="#view-instagram-menu" data-role="button" data-icon="bars" data-iconpos="notext" data-iconpos="right">Options</a>
 			</div>
 
+			<div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
+				<a href="#note-opts" data-role="button" data-icon="gear" data-iconpos="notext" data-iconpos="right" data-rel="popup" data-transition="slidedown">Note Options</a>
+			</div>
+
 			<h1>Instagram Serach</h1>
 		</div><!--end header-->
 
 		<div data-role="content">
+			<div data-role="popup" id="note-opts" data-theme="d">
+
+				<ul data-role="listview" data-inset="true" style="min-width:50px;" data-theme="d">
+					<li data-role="divider" data-theme="a">Choose an action</li>
+					<li data-icon="plus" class="ui-icon-alt"><a href="#create-a-note">New Note</a></li>
+				</ul> <!--end listview -->
+
+			</div><!--end popup-->
 			
 			<label for="text-basic"></label>
 			<p>Enter a search term at your own risk!</p>
@@ -304,10 +362,23 @@
 				<a href="#view-flickr-menu" data-role="button" data-icon="bars" data-iconpos="notext" data-iconpos="right">Options</a>
 			</div>
 
+			<div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
+				<a href="#note-opts" data-role="button" data-icon="gear" data-iconpos="notext" data-iconpos="right" data-rel="popup" data-transition="slidedown">Note Options</a>
+			</div>
+
 			<h1></h1>
 		</div><!--end header-->
 
 		<div data-role="content">
+			<div data-role="popup" id="note-opts" data-theme="d">
+
+				<ul data-role="listview" data-inset="true" style="min-width:50px;" data-theme="d">
+					<li data-role="divider" data-theme="a">Choose an action</li>
+					<li data-icon="plus" class="ui-icon-alt"><a href="#create-a-note">New Note</a></li>
+				</ul> <!--end listview -->
+
+			</div><!--end popup-->
+
 			<h1>Flickr Search</h1>
 			<hr>
 			<p>Search for images</p>
@@ -331,12 +402,14 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.mobile-1.3.1.min.js"></script>
 <script type="text/javascript" src="cordova-2.7.0.js"></script>
-<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV-Yu2jVNxyCSkShZlUR_owqcMAElquEQ&sensor=true"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/native.js"></script>
 <script type="text/javascript">
   app.initialize();
 </script>
+
 
 </body>
 </html>
