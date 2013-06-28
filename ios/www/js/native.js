@@ -48,6 +48,8 @@ function deletePhoto(){
 	});
 }
 
+deletePhoto();
+
 function showConfirm(){
 	navigator.notification.confirm(
 		"Remove Picture",
