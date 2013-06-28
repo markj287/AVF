@@ -7,7 +7,6 @@ var showpics = function (){
 	$.getJSON('http://api.flickr.com/services/feeds/photos_public.gne?tags=' + pic + "&tagmode=any&format=json&jsoncallback=?",
 	function(data){ $("#images").hide().html(data).fadeIn('fast');
 
-
 		$.each(data.items, function(i,item) {
 			var img = $("<img/>");
 				img.attr('width','300px');
@@ -16,7 +15,6 @@ var showpics = function (){
 		});
 	});
 }
-
 
 //Instagam function 
 $("#instaButton").click(function(){
@@ -27,12 +25,10 @@ $("#instaButton").click(function(){
       
 });
 
-
 var showInstPics = function(info){
 
     console.log(info);
   
-    
     $.each(info.data, function(index, photo){
     	var pic = "<li><img src=' " + photo.images.low_resolution.url + " ' alt=' " + photo.user.id + " ' /></li>";
         

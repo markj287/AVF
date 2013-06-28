@@ -42,12 +42,18 @@ var onConfirm = function(buttonIndex){
 	
 }
 
+function flickSearch(){
+	$("#flkSearchBtn").click(function(){
+		showpics();
+	});
+}
+flickSearch();
+
 function deletePhoto(){
 	$("#deletePhotoBtn").click(function(){
 		showConfirm();
 	});
 }
-
 deletePhoto();
 
 function showConfirm(){
@@ -58,8 +64,6 @@ function showConfirm(){
 		"Delete, Cancel"
 	);
 }
-
-
 
 var onGeoSuccess = function (position){
 	lat = position.coords.latitude;
