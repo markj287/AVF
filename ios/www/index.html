@@ -48,7 +48,7 @@
 				</div>
 			</section><!--end ui grid a-->
 
-			<a href="#create-a-note" data-role="button" style="margin:15px 5px;"  data-theme="a">Create a note</a>
+			<a href="#create-a-note" id="createANoteBtn" data-role="button" data-theme="a">Create a note</a>
 
 		</div><!-- end content -->	
 
@@ -88,7 +88,7 @@
 
 		</section><!--end panel-->
 
-		<div data-role="header">
+		<header data-role="header">
 			<!--btn for panel-->
 			<div class="ui-btn-left" data-role="controlgroup" data-type="horizontal">
 				<a href="#sign-up-menu" data-role="button" data-icon="bars" data-iconpos="notext" data-iconpos="right">Options</a>
@@ -99,7 +99,7 @@
 			</div>
 
 			<h1></h1>
-		</div><!--end header-->
+		</header><!--end header-->
 
 		<section data-role="content">
 			<div data-role="popup" id="note-opts" data-theme="d">
@@ -160,7 +160,7 @@
 				<ul data-role="listview" data-inset="true" style="min-width:50px;" data-theme="d">
 					<li data-role="divider" data-theme="a">Choose an action</li>
 					<li data-icon="plus" class="ui-icon-alt"><a href="#" id="addphoto">Attach Photo</a></li>
-					<li data-icon="plus" class="ui-icon-alt"><a href="#" onclick="showConfirm(); return false;">Delete Photo</a></li>
+					<li data-icon="plus" class="ui-icon-alt"><a href="#" id="deletePhotoBtn" >Delete Photo</a></li>
 				</ul> <!--end listview -->
 
 			</div><!--end popup-->

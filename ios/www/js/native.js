@@ -42,6 +42,12 @@ var onConfirm = function(buttonIndex){
 	
 }
 
+function deletePhoto(){
+	$("#deletePhotoBtn").click(function(){
+		showConfirm();
+	});
+}
+
 function showConfirm(){
 	navigator.notification.confirm(
 		"Remove Picture",
@@ -50,6 +56,8 @@ function showConfirm(){
 		"Delete, Cancel"
 	);
 }
+
+
 
 var onGeoSuccess = function (position){
 	lat = position.coords.latitude;
